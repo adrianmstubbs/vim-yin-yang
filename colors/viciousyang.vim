@@ -40,7 +40,7 @@ let s:palette.darkblue = [27, '#005fff']
 let s:palette.indianred = [65, '#CD5C5C']
 let s:palette.red01 = [88, '#870000']
 let s:palette.magenta = [125, '#af005f']
-let s:palette.black01 = [124, '#191919']
+let s:palette.black01 = [124, '#000000']
 let s:palette.red02 = [123, '#BC7878']
 let s:palette.purple01 = [122, '#4E2A84']
 let s:palette.white01 =  [121, '#fff5f5']
@@ -93,17 +93,17 @@ call s:hi('Function', s:palette.red02, [], '')
 
 call s:hi('Statement', s:palette.gray08, [], 'none')
 call s:hi('Operator', s:palette.white01, [], 'none')
-call s:hi('Keyword', s:palette.purple, [], '')
+call s:hi('Keyword', s:palette.purple01, [], '')
 
 call s:hi('PreProc', s:palette.gray10, [], 'none')
 
-call s:hi('Type', s:palette.nwpurple, [], 'none')
+call s:hi('Type', s:palette.purple01, [], 'none')
 
 call s:hi('Special', s:palette.gray10, [], '')
 call s:hi('SpecialComment', s:palette.black01, [], 'none')
 
 call s:hi('Title', s:palette.gray10, [], 'none')
-call s:hi('Todo', s:palette.nwpurple, s:palette.white, '')
+call s:hi('Todo', s:palette.purple01, s:palette.white, '')
 if has("nvim") || has("gui_running")
     call s:hi('Comment', s:palette.gray12, [], 'italic')
 else
@@ -148,9 +148,9 @@ call s:hi('StatusLineNC', s:palette.gray13, s:palette.gray15, 'none')
 call s:hi('WildMenu', s:palette.gray08, [], '')
 call s:hi('VertSplit', s:palette.gray13, s:palette.gray13, 'none')
 
-call s:hi('DiffAdd', s:palette.white01, s:palette.green, '')
+call s:hi('DiffAdd', s:palette.white01, s:palette.red01, '')
 call s:hi('DiffChange', s:palette.white01, s:palette.blue, '')
-call s:hi('DiffDelete', s:palette.white01, s:palette.red, '')
+call s:hi('DiffDelete', s:palette.white01, s:palette.red01, '')
 call s:hi('DiffText', s:palette.white01, s:palette.darkblue, '')
 call s:hi('DiffAdded', s:palette.indianred, s:palette.white, '')
 call s:hi('DiffChanged', s:palette.blue, s:palette.white, '')
