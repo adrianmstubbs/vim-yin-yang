@@ -32,6 +32,7 @@ let s:palette.gray03 = [239, '#4e4e4e']
 let s:palette.gray02 = [238, '#444444']
 let s:palette.gray01 = [235, '#262626']
 let s:palette.black = [233, '#121212']
+let s:palette.greyblack = [232, '#000000']
 
 let s:palette.purple = [98, '#875fd7']
 let s:palette.brown = [130, '#af5f00']
@@ -43,7 +44,6 @@ let s:palette.magenta = [125, '#af005f']
 let s:palette.black01 = [124, '#000000']
 let s:palette.red02 = [123, '#BC7878']
 let s:palette.purple01 = [122, '#4E2A84']
-let s:palette.white01 =  [121, '#fff5f5']
 
 if has("nvim") && (has("gui_running") || &termguicolors)
     let g:terminal_color_0 = s:palette.gray01[1]
@@ -81,7 +81,7 @@ function! s:hi(group, fg_color, bg_color, style)
 endfunction
 
 
-call s:hi('Normal', s:palette.white01, s:palette.black01, '')
+call s:hi('Normal', s:palette.white, s:palette.black, '')
 set background=light
 
 call s:hi('Constant', s:palette.white01, [], 'none')
