@@ -10,7 +10,7 @@ highlight clear
 if exists("syntax_on")
     syntax reset
 endif
-let g:colors_name = "tabrisyang"
+let g:colors_name = "viciousyang"
 
 
 let s:palette = {}
