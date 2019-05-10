@@ -1,13 +1,11 @@
-Yin-Yang
+Vicious-Yin-Yang
 ========
 
 Yin-Yang is a black and white color scheme for Vim and is heavily inspired by
 [preto][] and [base16-grayscale][].
 
-I liked preto's subtle use of colors in a black/white colorscheme but found the
-contrast too high for my liking, so I created Yin-Yang as a low contrast
-version of preto.
-
+this is a fork as something for me to edit
+inspired by the orignal ying yang by pgdouyon
 
 License
 -------
