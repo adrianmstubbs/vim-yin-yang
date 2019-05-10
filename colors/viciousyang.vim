@@ -82,7 +82,7 @@ endfunction
 
 
 call s:hi('Normal', s:palette.white01, s:palette.black01, '')
-set background=dark
+set background=light
 
 call s:hi('Constant', s:palette.white01, [], 'none')
 call s:hi('String', s:palette.white01, [], '')
