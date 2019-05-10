@@ -26,7 +26,7 @@ let s:palette.gray09 = [245, '#8a8a8a']
 let s:palette.gray08 = [244, '#808080']
 let s:palette.gray07 = [243, '#767676']
 let s:palette.gray06 = [242, '#666666']
-let s:palette.gray05 = [241, '#606060']
+let s:palette.gray05 = [241, '#191919']
 let s:palette.gray04 = [240, '#585858']
 let s:palette.gray03 = [239, '#4e4e4e']
 let s:palette.gray02 = [238, '#444444']
@@ -37,9 +37,12 @@ let s:palette.purple = [98, '#875fd7']
 let s:palette.brown = [130, '#af5f00']
 let s:palette.blue = [67, '#5f87af']
 let s:palette.darkblue = [27, '#005fff']
-let s:palette.green = [65, '#5f875f']
-let s:palette.red = [88, '#870000']
+let s:palette.indianred = [65, '#CD5C5C']
+let s:palette.red01 = [88, '#870000']
 let s:palette.magenta = [125, '#af005f']
+let s:palette.black01 = [124, '#191919']
+let s:palette.red02 = [123, '#BC7878']
+let s:palette.purple01 = [122, '#4E2A84']
 
 if has("nvim") && (has("gui_running") || &termguicolors)
     let g:terminal_color_0 = s:palette.gray01[1]
@@ -77,29 +80,29 @@ function! s:hi(group, fg_color, bg_color, style)
 endfunction
 
 
-call s:hi('Normal', s:palette.gray05, s:palette.white, '')
+call s:hi('Normal', s:palette.black01, s:palette.white, '')
 set background=light
 
-call s:hi('Constant', s:palette.gray11, [], 'bold')
-call s:hi('String', s:palette.gray08, [], '')
-call s:hi('Number', s:palette.gray10, [], '')
+call s:hi('Constant', s:palette.black01, [], 'none')
+call s:hi('String', s:palette.black01, [], '')
+call s:hi('Number', s:palette.black01, [], '')
 
-call s:hi('Identifier', s:palette.gray06, [], 'none')
-call s:hi('Function', s:palette.gray06, [], '')
+call s:hi('Identifier', s:palette.red02, [], 'none')
+call s:hi('Function', s:palette.red02, [], '')
 
-call s:hi('Statement', s:palette.gray08, [], 'bold')
-call s:hi('Operator', s:palette.gray03, [], 'none')
-call s:hi('Keyword', s:palette.gray10, [], '')
+call s:hi('Statement', s:palette.gray08, [], 'none')
+call s:hi('Operator', s:palette.black01, [], 'none')
+call s:hi('Keyword', s:palette.purple, [], '')
 
 call s:hi('PreProc', s:palette.gray10, [], 'none')
 
-call s:hi('Type', s:palette.gray09, [], 'bold')
+call s:hi('Type', s:palette.nwpurple, [], 'none')
 
 call s:hi('Special', s:palette.gray10, [], '')
-call s:hi('SpecialComment', s:palette.gray12, [], 'bold')
+call s:hi('SpecialComment', s:palette.black01, [], 'none')
 
-call s:hi('Title', s:palette.gray10, [], 'bold')
-call s:hi('Todo', s:palette.purple, s:palette.white, '')
+call s:hi('Title', s:palette.gray10, [], 'none')
+call s:hi('Todo', s:palette.nwpurple, s:palette.white, '')
 if has("nvim") || has("gui_running")
     call s:hi('Comment', s:palette.gray12, [], 'italic')
 else
@@ -113,15 +116,15 @@ call s:hi('CursorLineNr', s:palette.gray06, s:palette.gray15, 'none')
 
 call s:hi('Visual', s:palette.white, s:palette.gray06, '')
 call s:hi('Search', s:palette.gray15, s:palette.gray03, 'none')
-call s:hi('IncSearch', s:palette.white, s:palette.gray11, 'bold')
+call s:hi('IncSearch', s:palette.white, s:palette.gray11, 'none')
 
-call s:hi('SpellBad', s:palette.red, s:palette.white, 'undercurl')
-call s:hi('SpellCap', s:palette.red, s:palette.white, 'undercurl')
-call s:hi('SpellLocal', s:palette.red, s:palette.white, 'undercurl')
+call s:hi('SpellBad', s:palette.red01, s:palette.white, 'undercurl')
+call s:hi('SpellCap', s:palette.red01, s:palette.white, 'undercurl')
+call s:hi('SpellLocal', s:palette.red01, s:palette.white, 'undercurl')
 call s:hi('SpellRare', s:palette.brown, s:palette.white, 'undercurl')
 
-call s:hi('Error', s:palette.red, s:palette.white, 'bold')
-call s:hi('ErrorMsg', s:palette.red, s:palette.white, '')
+call s:hi('Error', s:palette.red01, s:palette.white, 'none')
+call s:hi('ErrorMsg', s:palette.red01, s:palette.white, '')
 call s:hi('WarningMsg', s:palette.brown, s:palette.white, '')
 call s:hi('ModeMsg', s:palette.gray10, [], '')
 call s:hi('MoreMsg', s:palette.gray10, [], '')
@@ -148,9 +151,9 @@ call s:hi('DiffAdd', s:palette.white, s:palette.green, '')
 call s:hi('DiffChange', s:palette.white, s:palette.blue, '')
 call s:hi('DiffDelete', s:palette.white, s:palette.red, '')
 call s:hi('DiffText', s:palette.white, s:palette.darkblue, '')
-call s:hi('DiffAdded', s:palette.green, s:palette.white, '')
+call s:hi('DiffAdded', s:palette.indianred, s:palette.white, '')
 call s:hi('DiffChanged', s:palette.blue, s:palette.white, '')
-call s:hi('DiffRemoved', s:palette.red, s:palette.white, '')
+call s:hi('DiffRemoved', s:palette.red01, s:palette.white, '')
 
 
 highlight! link Character Constant
