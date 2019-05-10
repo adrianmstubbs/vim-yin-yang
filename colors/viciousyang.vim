@@ -31,7 +31,7 @@ let s:palette.gray04 = [240, '#585858']
 let s:palette.gray03 = [239, '#4e4e4e']
 let s:palette.gray02 = [238, '#444444']
 let s:palette.gray01 = [235, '#262626']
-let s:palette.black01 = [233, '#121212']
+let s:palette.black = [233, '#121212']
 
 let s:palette.purple = [98, '#875fd7']
 let s:palette.brown = [130, '#af5f00']
@@ -82,7 +82,7 @@ endfunction
 
 
 call s:hi('Normal', s:palette.white01, s:palette.black01, '')
-set background=light
+set background=dark
 
 call s:hi('Constant', s:palette.white01, [], 'none')
 call s:hi('String', s:palette.white01, [], '')
