@@ -43,6 +43,7 @@ let s:palette.magenta = [125, '#af005f']
 let s:palette.black01 = [124, '#191919']
 let s:palette.red02 = [123, '#BC7878']
 let s:palette.purple01 = [122, '#4E2A84']
+let s:palette.white01 =  [121, '#fff5f5']
 
 if has("nvim") && (has("gui_running") || &termguicolors)
     let g:terminal_color_0 = s:palette.gray01[1]
@@ -80,18 +81,18 @@ function! s:hi(group, fg_color, bg_color, style)
 endfunction
 
 
-call s:hi('Normal', s:palette.black01, s:palette.white, '')
+call s:hi('Normal', s:palette.white01, s:palette.black01, '')
 set background=light
 
-call s:hi('Constant', s:palette.black01, [], 'none')
-call s:hi('String', s:palette.black01, [], '')
-call s:hi('Number', s:palette.black01, [], '')
+call s:hi('Constant', s:palette.white01, [], 'none')
+call s:hi('String', s:palette.white01, [], '')
+call s:hi('Number', s:palette.white01, [], '')
 
 call s:hi('Identifier', s:palette.red02, [], 'none')
 call s:hi('Function', s:palette.red02, [], '')
 
 call s:hi('Statement', s:palette.gray08, [], 'none')
-call s:hi('Operator', s:palette.black01, [], 'none')
+call s:hi('Operator', s:palette.white01, [], 'none')
 call s:hi('Keyword', s:palette.purple, [], '')
 
 call s:hi('PreProc', s:palette.gray10, [], 'none')
@@ -114,9 +115,9 @@ call s:hi('FoldColumn', s:palette.gray08, s:palette.gray15, 'none')
 call s:hi('CursorLine', [], s:palette.gray15, 'none')
 call s:hi('CursorLineNr', s:palette.gray06, s:palette.gray15, 'none')
 
-call s:hi('Visual', s:palette.white, s:palette.gray06, '')
+call s:hi('Visual', s:palette.white01, s:palette.gray06, '')
 call s:hi('Search', s:palette.gray15, s:palette.gray03, 'none')
-call s:hi('IncSearch', s:palette.white, s:palette.gray11, 'none')
+call s:hi('IncSearch', s:palette.white01, s:palette.gray11, 'none')
 
 call s:hi('SpellBad', s:palette.red01, s:palette.white, 'undercurl')
 call s:hi('SpellCap', s:palette.red01, s:palette.white, 'undercurl')
@@ -138,7 +139,7 @@ call s:hi('NonText', s:palette.gray13, [], '')
 call s:hi('Directory', s:palette.gray08, [], '')
 
 call s:hi('Pmenu', s:palette.gray05, s:palette.gray14, 'none')
-call s:hi('PmenuSbar', s:palette.white, s:palette.gray01, 'none')
+call s:hi('PmenuSbar', s:palette.white01, s:palette.gray01, 'none')
 call s:hi('PmenuSel', s:palette.gray14, s:palette.gray05, '')
 call s:hi('PmenuThumb', s:palette.gray14, s:palette.gray03, 'none')
 
@@ -147,10 +148,10 @@ call s:hi('StatusLineNC', s:palette.gray13, s:palette.gray15, 'none')
 call s:hi('WildMenu', s:palette.gray08, [], '')
 call s:hi('VertSplit', s:palette.gray13, s:palette.gray13, 'none')
 
-call s:hi('DiffAdd', s:palette.white, s:palette.green, '')
-call s:hi('DiffChange', s:palette.white, s:palette.blue, '')
-call s:hi('DiffDelete', s:palette.white, s:palette.red, '')
-call s:hi('DiffText', s:palette.white, s:palette.darkblue, '')
+call s:hi('DiffAdd', s:palette.white01, s:palette.green, '')
+call s:hi('DiffChange', s:palette.white01, s:palette.blue, '')
+call s:hi('DiffDelete', s:palette.white01, s:palette.red, '')
+call s:hi('DiffText', s:palette.white01, s:palette.darkblue, '')
 call s:hi('DiffAdded', s:palette.indianred, s:palette.white, '')
 call s:hi('DiffChanged', s:palette.blue, s:palette.white, '')
 call s:hi('DiffRemoved', s:palette.red01, s:palette.white, '')
