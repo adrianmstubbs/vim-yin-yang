@@ -84,20 +84,20 @@ endfunction
 call s:hi('Normal', s:palette.white, s:palette.black, '')
 set background=light
 
-call s:hi('Constant', s:palette.white01, [], 'none')
-call s:hi('String', s:palette.white01, [], '')
-call s:hi('Number', s:palette.white01, [], '')
+call s:hi('Constant', s:palette.white, [], 'none')
+call s:hi('String', s:palette.white, [], '')
+call s:hi('Number', s:palette.white, [], '')
 
 call s:hi('Identifier', s:palette.red02, [], 'none')
 call s:hi('Function', s:palette.red02, [], '')
 
 call s:hi('Statement', s:palette.gray08, [], 'none')
-call s:hi('Operator', s:palette.white01, [], 'none')
-call s:hi('Keyword', s:palette.purple01, [], '')
+call s:hi('Operator', s:palette.white, [], 'none')
+call s:hi('Keyword', s:palette.purple, [], '')
 
 call s:hi('PreProc', s:palette.gray10, [], 'none')
 
-call s:hi('Type', s:palette.purple01, [], 'none')
+call s:hi('Type', s:palette.purple, [], 'none')
 
 call s:hi('Special', s:palette.gray10, [], '')
 call s:hi('SpecialComment', s:palette.black01, [], 'none')
@@ -115,7 +115,7 @@ call s:hi('FoldColumn', s:palette.gray08, s:palette.gray15, 'none')
 call s:hi('CursorLine', [], s:palette.gray15, 'none')
 call s:hi('CursorLineNr', s:palette.gray06, s:palette.gray15, 'none')
 
-call s:hi('Visual', s:palette.white01, s:palette.gray06, '')
+call s:hi('Visual', s:palette.white, s:palette.gray06, '')
 call s:hi('Search', s:palette.gray15, s:palette.gray03, 'none')
 call s:hi('IncSearch', s:palette.white01, s:palette.gray11, 'none')
 
@@ -139,7 +139,7 @@ call s:hi('NonText', s:palette.gray13, [], '')
 call s:hi('Directory', s:palette.gray08, [], '')
 
 call s:hi('Pmenu', s:palette.gray05, s:palette.gray14, 'none')
-call s:hi('PmenuSbar', s:palette.white01, s:palette.gray01, 'none')
+call s:hi('PmenuSbar', s:palette.white, s:palette.gray01, 'none')
 call s:hi('PmenuSel', s:palette.gray14, s:palette.gray05, '')
 call s:hi('PmenuThumb', s:palette.gray14, s:palette.gray03, 'none')
 
@@ -148,10 +148,10 @@ call s:hi('StatusLineNC', s:palette.gray13, s:palette.gray15, 'none')
 call s:hi('WildMenu', s:palette.gray08, [], '')
 call s:hi('VertSplit', s:palette.gray13, s:palette.gray13, 'none')
 
-call s:hi('DiffAdd', s:palette.white01, s:palette.red01, '')
-call s:hi('DiffChange', s:palette.white01, s:palette.blue, '')
-call s:hi('DiffDelete', s:palette.white01, s:palette.red01, '')
-call s:hi('DiffText', s:palette.white01, s:palette.darkblue, '')
+call s:hi('DiffAdd', s:palette.white, s:palette.red01, '')
+call s:hi('DiffChange', s:palette.white, s:palette.blue, '')
+call s:hi('DiffDelete', s:palette.white, s:palette.red01, '')
+call s:hi('DiffText', s:palette.white, s:palette.darkblue, '')
 call s:hi('DiffAdded', s:palette.indianred, s:palette.white, '')
 call s:hi('DiffChanged', s:palette.blue, s:palette.white, '')
 call s:hi('DiffRemoved', s:palette.red01, s:palette.white, '')
